@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>distributed-flexible-transaction</artifactId>
+    <groupId>com.base.ice</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.base.ice</groupId>
+  <artifactId>distributed-transaction-test-dubboservice1</artifactId>
+  <packaging>pom</packaging>
+  <name>distributed-transaction-test-dubboservice1</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+  	  	<dubbo.version>2.4.9</dubbo.version>
+  	<zkclient.version>0.1</zkclient.version>
+  	<org.springframework.version>4.1.1.RELEASE</org.springframework.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <modules>
+  	  <module>distributed-transaction-test-dubboservice1-api</module>
+	  <module>distributed-transaction-test-dubboservice1-provider</module>
+
+  </modules>
+</project>

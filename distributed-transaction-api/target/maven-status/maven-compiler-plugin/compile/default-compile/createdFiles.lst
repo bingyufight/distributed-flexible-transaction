@@ -1,0 +1,14 @@
+com\distributed\transaction\api\Invocation.class
+com\distributed\transaction\api\ParticipantState.class
+com\distributed\transaction\api\Transaction.class
+com\distributed\transaction\api\TransactionGlobalId.class
+com\distributed\transaction\api\ParticipantId.class
+com\distributed\transaction\api\Transactionable.class
+com\distributed\transaction\api\TransactionWriteAheadLogType.class
+com\distributed\transaction\api\exception\TransactionRollBackException.class
+com\distributed\transaction\api\ParticipantType.class
+com\distributed\transaction\api\service\TransactionManagerService.class
+com\distributed\transaction\api\TransactionState.class
+com\distributed\transaction\api\TransactionInvocation.class
+com\distributed\transaction\api\TransactionWriteAheadLog.class
+com\distributed\transaction\api\Participant.class

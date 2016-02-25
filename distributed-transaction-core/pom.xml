@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>distributed-flexible-transaction</artifactId>
+    <groupId>com.base.ice</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.base.ice</groupId>
+  <artifactId>distributed-transaction-core</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>distributed-transaction-core</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+  		<org.springframework.version>4.1.1.RELEASE</org.springframework.version>
+		<spring.data.mongo.version>1.5.4.RELEASE</spring.data.mongo.version>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+	    <dependency>
+	         <groupId>com.base.ice</groupId>
+	         <artifactId>distributed-transaction-api</artifactId>
+	         <version>${project.version}</version>
+	    </dependency>
+	    
+	    <dependency>
+	         <groupId>com.base.ice</groupId>
+	         <artifactId>distributed-transaction-common</artifactId>
+	         <version>${project.version}</version>
+	    </dependency>
+	    
+	    <!--  Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.version}</version>
+			<exclusions>
+				<!-- Exclude Commons Logging in favor of SLF4j -->
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				 </exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${org.springframework.version}</version>
+			<exclusions>
+				<!-- Exclude Commons Logging in favor of SLF4j -->
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>${spring.data.mongo.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+		
+				<!-- Morphia -->
+		<dependency> 
+            <groupId>com.google.code.morphia</groupId> 
+            <artifactId>morphia</artifactId> 
+            <version>0.104</version> 
+		</dependency>
+		
+		<!-- Jackson JSON Mapper -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.5.6</version>
+		</dependency>
+  
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <version>3.8.1</version>
+	      <scope>test</scope>
+	    </dependency>
+  </dependencies>
+</project>

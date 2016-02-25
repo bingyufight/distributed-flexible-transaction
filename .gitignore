@@ -1,0 +1,15 @@
+*.class
+
+# Windows shortcuts
+*.lnk
+.classpath
+.project
+.svn
+.settings/org.eclipse.wst.validation.prefs
+.settings/org.eclipse.wst.common.project.facet.core.xml
+target/classes/smart-validate-message_zh_CN.properties
+target/maven-archiver/pom.properties
+.settings/org.eclipse.core.resources.prefs
+.settings/org.eclipse.m2e.core.prefs
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.wst.common.component

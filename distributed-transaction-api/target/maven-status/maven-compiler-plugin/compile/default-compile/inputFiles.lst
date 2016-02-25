@@ -1,0 +1,14 @@
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\ParticipantType.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\Participant.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\TransactionInvocation.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\ParticipantId.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\TransactionGlobalId.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\exception\TransactionRollBackException.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\Invocation.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\service\TransactionManagerService.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\ParticipantState.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\Transactionable.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\TransactionWriteAheadLogType.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\Transaction.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\TransactionState.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-api\src\main\java\com\distributed\transaction\api\TransactionWriteAheadLog.java

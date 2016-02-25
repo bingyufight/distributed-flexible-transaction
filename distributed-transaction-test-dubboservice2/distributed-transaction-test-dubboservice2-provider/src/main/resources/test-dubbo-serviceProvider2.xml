@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+	
+    <dubbo:application name="${dubboservice2.application.name}" owner="${dubboservice2.application.owner}" />
+    <dubbo:provider loadbalance="${dubboservice2.service.loadbalance}" timeout = "${dubboservice2.service.timeout}"/>
+ 
+    <dubbo:registry protocol="${dubboservice2.registry.protocol}" address="${dubboservice2.registry.address}" />
+	<dubbo:protocol name="${dubboservice2.protocol.name}" port="${dubboservice2.protocol.port}" threadpool="cached" threads="${dubboservice2.service.provider.threads:200}"  />
+
+    <dubbo:consumer check="false" />
+    
+    <dubbo:service interface="com.distributed.transaction.test.dubboservice2.api.DubboWithDistributedTransactionAgentService2" ref="dubboWithDistributedTransactionAgentService2" timeout="10000"/>
+    
+     <dubbo:reference id="dubboWithDistributedTransactionAgentService1"
+		interface="com.distributed.transaction.test.dubboservice1.api.DubboWithDistributedTransactionAgentService1" />
+
+
+</beans>

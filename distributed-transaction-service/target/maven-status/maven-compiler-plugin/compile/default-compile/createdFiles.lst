@@ -1,0 +1,9 @@
+com\distributed\transaction\service\dubbo\util\ParticipantRollbackConsumerConfig$ParticipantRollbackConsumerConfigHolder.class
+com\distributed\transaction\service\rollback\compensation\TransactionRollbackCompensation.class
+com\distributed\transaction\service\dubbo\launcher\TransactionServiceLauncher$1.class
+com\distributed\transaction\service\dubbo\util\ParticipantRollbackConsumerConfig$1.class
+com\distributed\transaction\service\dubbo\util\ParticipantRollbackConsumerConfig.class
+com\distributed\transaction\service\rollback\compensation\TransactionRollbackCompensationTaskJob.class
+com\distributed\transaction\service\dubbo\impl\TransactionManagerServiceImpl.class
+com\distributed\transaction\service\dubbo\launcher\TransactionServiceLauncher.class
+com\distributed\transaction\service\dubbo\util\ParticipantRollbackUtil.class

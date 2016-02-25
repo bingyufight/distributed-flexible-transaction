@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+			http://www.springframework.org/schema/context
+		    http://www.springframework.org/schema/context/spring-context-4.1.xsd
+			http://www.springframework.org/schema/data/mongo
+            http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+            http://www.springframework.org/schema/jdbc  
+            http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+			" >
+
+
+<bean id="propertyConfigurerDistributedTransactionCore" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">   
+	    <property name="order" value="1" />   
+	    <property name="ignoreUnresolvablePlaceholders" value="true" />   
+	    <property name="location">   
+	       <value>classpath:mongodb.properties</value>
+	    </property>   
+	</bean> 
+
+
+	<!-- Scans the classpath of this application for @Components to deploy as beans -->
+	<context:annotation-config />
+	<context:component-scan base-package="com.distributed.transaction.core" />
+
+
+     <mongo:mongo host="127.0.0.1" port="27017">
+	    <mongo:options            
+	        connections-per-host="200"
+            threads-allowed-to-block-for-connection-multiplier="100"
+            connect-timeout="1000"
+            max-wait-time="1500"
+            auto-connect-retry="true"
+            socket-keep-alive="true"
+            socket-timeout="1500" />
+  
+	  </mongo:mongo>
+     <bean id="jkMapper" class="org.codehaus.jackson.map.ObjectMapper" />
+     	 
+     <bean id="morphia" class="com.google.code.morphia.Morphia"/>
+
+	 <bean id="mds" class="com.distributed.transaction.core.mongo.dao.MongoDatastoreTemplate">
+	       <constructor-arg name="mongo" ref="mongo"/>
+	       <constructor-arg name="morphia" ref="morphia"/>
+	       <constructor-arg name="dbName" value="${mongo.db.name}"/>
+	       <constructor-arg name="username" value="${mongo.db.user}"/>
+	       <constructor-arg name="password" value="${mongo.db.pass}"/>
+	 </bean>
+
+     
+	
+	 <!-- mongo的工厂，通过它来取得mongo实例,dbname为mongodb的数据库名，没有的话会自动创建 -->
+    <mongo:db-factory dbname="${mongo.db.name}" mongo-ref="mongo"/>
+ 
+    <!-- mongodb的主要操作对象，所有对mongodb的增删改查的操作都是通过它完成 -->
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+      <constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
+       <constructor-arg name="mongoConverter" ref="converter"/>  
+    </bean>
+	<mongo:mapping-converter id="converter" base-package="com.distributed.transaction.core.mongo.pojo" />
+	
+	<!-- 
+		Activates repository support by scanning the configured package for interfaces
+		extening MongoRepository. Will try to derive queries from the methods declared
+		in AlbumRepository e.g. The repository support will use the bean called
+		'mongoTemplate'	by default. Use 'mongo-template-ref' attribute to customize.
+	-->
+	<mongo:repositories base-package="com.distributed.transaction.core.mongo.repository" mongo-template-ref="mongoTemplate" />
+
+
+   
+    
+</beans>

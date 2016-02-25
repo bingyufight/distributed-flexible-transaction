@@ -1,0 +1,6 @@
+D:\opensource\distributed-flexible-transaction\distributed-transaction-service\src\main\java\com\distributed\transaction\service\dubbo\impl\TransactionManagerServiceImpl.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-service\src\main\java\com\distributed\transaction\service\dubbo\util\ParticipantRollbackConsumerConfig.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-service\src\main\java\com\distributed\transaction\service\dubbo\util\ParticipantRollbackUtil.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-service\src\main\java\com\distributed\transaction\service\rollback\compensation\TransactionRollbackCompensationTaskJob.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-service\src\main\java\com\distributed\transaction\service\dubbo\launcher\TransactionServiceLauncher.java
+D:\opensource\distributed-flexible-transaction\distributed-transaction-service\src\main\java\com\distributed\transaction\service\rollback\compensation\TransactionRollbackCompensation.java

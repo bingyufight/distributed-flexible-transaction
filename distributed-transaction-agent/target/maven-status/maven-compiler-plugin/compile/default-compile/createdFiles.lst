@@ -1,0 +1,5 @@
+com\distributed\transaction\agent\ParticipantTracer$1.class
+com\distributed\transaction\agent\ParticipantTracer.class
+com\distributed\transaction\agent\spring\TransactionableDubboServiceCenter.class
+com\distributed\transaction\agent\ParticipantTracer$ParticipantTracerHolder.class
+com\distributed\transaction\agent\dubbo\filter\TransactionFilter.class
