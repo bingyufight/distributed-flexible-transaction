@@ -8,7 +8,6 @@ A->B,B->C,C->D,D->E,E->F,在distributed-flexible-transaction分布式事务框�
 分布式事务框架将会执行A->B,B->C,C->D 的各个participant(分布式服务调用)的回滚服务进行事务补偿。同时，在分布式事务的整个执行过程中，用WAL(Write ahead log)机制,将分
 布式服务执行的commit和rollback之前保留重要执行信息。
 
-这个分布式框架目前只是一个初级的版本，后续会继续迭代。
 		 
 <h1>distributed-flexible-transaction分布式事务基本组成模块</h1>
 
